@@ -53,16 +53,16 @@ const CardShuffler = () => {
   return (
     <div className="inner">
       <button className="btn_increment" onClick={handleIncrement}>
-        증가
+        Spread
       </button>
       <button className="btn_decrement" onClick={handleDecrement}>
-        감소
+        Withdraw
       </button>
       <button className="btn_shuffle" onClick={handleShuffle}>
-        셔플
+        Shuffle
       </button>
       <button className="btn_result" onClick={handleResult}>
-        결과
+        Showdown
       </button>
       <div className="card_area">
         {cards.map((card, index) => (

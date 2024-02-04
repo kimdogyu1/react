@@ -262,11 +262,6 @@ html {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   margin-top: 72px;
 }
-.header .mo_gnb_scroll {
-  position: relative;
-  min-height: 100%;
-  padding: 0 0 160px;
-}
 .header .mo_gnb_menu {
   position: relative;
   padding: 20px;
@@ -592,6 +587,23 @@ html {
   display: flex;
   flex-direction: row;
 }
+.slot_machine.active .symbols {
+  animation: moveresult 1.5s linear infinite;
+}
+.slot_machine.end .symbols {
+  animation: none;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.slot_machine.end .symbols .thumbnail {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  animation: none;
+}
 
 .reel {
   overflow: hidden;
@@ -716,19 +728,19 @@ html {
 }
 @keyframes moveresult {
   0% {
-    transform: translateY(-800%);
+    transform: translateY(-14%);
   }
   25% {
-    transform: translateY(-600%);
+    transform: translateY(-150%);
   }
   50% {
-    transform: translateY(-400%);
+    transform: translateY(-300%);
   }
   75% {
-    transform: translateY(-200%);
+    transform: translateY(-400%);
   }
   100% {
-    transform: translateY(-100%);
+    transform: translateY(-500%);
   }
 }
 .btn_slot {
@@ -746,11 +758,26 @@ html {
   margin-top: -10px;
   color: #fff;
 }
+.section_card.active .inner {
+  padding: 6px 0 0;
+}
+.section_card.active button {
+  display: none;
+}
+.section_card.active .card_item {
+  width: 280px;
+  height: 480px;
+}
+.section_card .inner {
+  text-align: center;
+  padding: 30px 0;
+}
 .section_card .card_area {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  font-size: 0;
 }
 .section_card .card_item {
   width: 100px;
@@ -769,6 +796,50 @@ html {
 .section_card .card_item.item_02 {
   background: url(../img/card_1.png) 50% 0 no-repeat;
   background-size: cover;
+}
+.section_card .card_item.item_03 {
+  background: url(../img/card_2.png) 50% 0 no-repeat;
+  background-size: cover;
+}
+.section_card .card_item.item_04 {
+  background: url(../img/card_3.png) 50% 0 no-repeat;
+  background-size: cover;
+}
+.section_card .card_item.item_05 {
+  background: url(../img/card_4.png) 50% 0 no-repeat;
+  background-size: cover;
+}
+.section_card .card_item.item_06 {
+  background: url(../img/card_5.png) 50% 0 no-repeat;
+  background-size: cover;
+}
+.section_card .card_item.item_07 {
+  background: url(../img/card_6.png) 50% 0 no-repeat;
+  background-size: cover;
+}
+.section_card .card_item.item_08 {
+  background: url(../img/card_7.png) 50% 0 no-repeat;
+  background-size: cover;
+}
+.section_card .card_item.item_09 {
+  background: url(../img/card_8.png) 50% 0 no-repeat;
+  background-size: cover;
+}
+.section_card .card_item.item_10 {
+  background: url(../img/card_9.png) 50% 0 no-repeat;
+  background-size: cover;
+}
+.section_card .card_item.item_11 {
+  background: url(../img/card_10.png) 50% 0 no-repeat;
+  background-size: cover;
+}
+.section_card .card_item.item_12 {
+  background: url(../img/card_11.png) 50% 0 no-repeat;
+  background-size: cover;
+}
+.section_card button {
+  margin: 10px;
+  color: #fff;
 }
 
 .pop_layer_01 {
@@ -792,6 +863,9 @@ html {
   position: relative;
   width: 300px;
   height: 300px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
 }
 
 .pop_layer_01 .pop_content .close_btn {
@@ -806,6 +880,100 @@ html {
 }
 
 .pop_layer_01 .pop_content .close_btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(29, 34, 48, 0.5);
+}
+
+.pop_layer_02 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background-color: #1d2230;
+  z-index: 1010;
+}
+.pop_layer_02.active {
+  display: block;
+}
+
+.pop_layer_02 .pop_content {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
+.pop_layer_02 .pop_content .close_btn {
+  position: absolute;
+  top: -50px;
+  right: -10px;
+  background-image: url(https://kimdogyu1.github.io/kdg.html/images/sprite.png);
+  background-position: 0px -100px;
+  width: 45px;
+  height: 45px;
+  background-size: 200px 145px;
+}
+
+.pop_layer_02 .pop_content .close_btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(29, 34, 48, 0.5);
+}
+
+.pop_layer_03 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background-color: #1d2230;
+  z-index: 1010;
+}
+.pop_layer_03.active {
+  display: block;
+}
+
+.pop_layer_03 .pop_content {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
+.pop_layer_03 .pop_content .close_btn {
+  position: absolute;
+  top: -50px;
+  right: -10px;
+  background-image: url(https://kimdogyu1.github.io/kdg.html/images/sprite.png);
+  background-position: 0px -100px;
+  width: 45px;
+  height: 45px;
+  background-size: 200px 145px;
+}
+
+.pop_layer_03 .pop_content .close_btn::before {
   content: "";
   position: absolute;
   top: 0;

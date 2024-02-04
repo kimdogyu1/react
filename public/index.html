@@ -8,28 +8,28 @@
   <meta property="og:type" content="website" />
   <meta property="og:article:author" content="" />
   <meta property="og:article:author:url" content="" />
-  <title>스프라이트 이미지 적용</title>
+  <title>정적, 동적 이벤트 웹페이지</title>
   <link rel="apple-touch-icon-precomposed" href="#" />
   <link rel="icon" type="image/x-icon" href="#" />
   <link rel="shortcut icon" type="image/x-icon" href="#" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" type="text/css" href="src/css/main.css">
 </head>
 
 <body>
   <div class="dimmed"></div>
   <p class="blind">
-    현재 페이지는 라이브러리 리액트를 이용하여 환경 구축을 하였습니다.
+    현재 페이지는 라이브러리(리액트)를 이용하여 환경 구축을 하였습니다.
     자바스크립트 자동 빌드 gulp를 활용하여 scss, sprite img, mixin, component 등 활용하여 편리하게 작업이 가능합니다.
 
-    업무 진행시 웹 개발 페이지와 웹퍼블리셔 페이지 싱크가 안 맞는 경우들이 존재합니다. 추후 업무범위 확장 및 페이지 리뉴얼 등 큰 이슈 상황에서
-    라이브러리로 배포된 페이지 자체 내에서 html, scss(css), 이미지, 인터렉션 등 직접 수정 진행이 가능하도록 만들고 싶어 제작하였습니다.
+    업무 진행시 웹 개발 페이지와 웹퍼블리셔 페이지 싱크가 안 맞는 경우들이 존재합니다.
+    추후 업무범위 확장 및 페이지 리뉴얼 등 큰 이슈 상황에서 라이브러리로 배포된 페이지 자체 내에서
+    html, scss(css), 이미지, 인터렉션 등 직접 수정 진행이 가능하도록 만들고 싶어 제작하였습니다.
 
     물론 개발 라이브러리 구조에 맞게 컴포넌트나 스타일 적용 방식 등 고려할 점이나 변수들은 존재합니다.(사이드이펙트, 머지 충돌 포함 등...)
     기획자, 디자이너, 개발자 모두 동일한 싱크로 확인하고, 프로세스가 간소화 되도록 목표를 잡고 계속해서 발전시키겠습니다.
 
-    환경 구축이란 부분이 겉으로 표현되기에는 부족함이 있지만 앞으로 개선해 나아가야 할 이슈라고 생각됩니다.
-    (별개로 해당 페이지 내용은 이벤트 페이지에서 사용 가능한 룰렛, 슬롯머신, 카드섹션 애니메이션을 활용하여 반응형 웹 페이지를 만들어봤습니다.)
+    환경 구축이란 부분이 겉으로 표현되기에는 부족함이 있지만 계속해서 개선해 나아가야 할 이슈라고 생각됩니다.
+    (해당 산출물은 이벤트 페이지에서 사용 가능한 룰렛, 슬롯머신, 카드 애니메이션 등 정적&동적 페이지를 활용하여 제작하였습니다.)
   </p>
   <div class="wrap">
     <header class="header">
@@ -39,23 +39,23 @@
         </h1>
         <div class="pc_gnb">
           <ul class="gnb_menu_list">
-            <li class="gnb_menu_item"><a class="gnb_menu_link" href="#greeting">스프라이트1</a></li>
-            <li class="gnb_menu_item"><a class="gnb_menu_link" href="#works">스프라이트2</a></li>
-            <li class="gnb_menu_item"><a class="gnb_menu_link" href="#project">스프라이트3</a></li>
-            <li class="gnb_menu_item"><a class="gnb_menu_link" href="#about">스프라이트4</a></li>
+            <li class="gnb_menu_item"><a class="gnb_menu_link" href="#shuffler">타로카드</a></li>
+            <li class="gnb_menu_item"><a class="gnb_menu_link" href="#machine">슬롯머신</a></li>
+            <li class="gnb_menu_item"><a class="gnb_menu_link" href="#vip">vip</a></li>
+            <li class="gnb_menu_item"><a class="gnb_menu_link" href="#roulette">룰렛</a></li>
           </ul>
         </div>
         <button type="button" class="btn_mo_menu"><span class="blind">모바일 메뉴</span></button>
         <div class="mo_gnb_wrap">
           <div class="mo_gnb">
             <div class="mo_gnb_inner">
-              <div class="mo_gnb_scroll">
+              <div>
                 <ul>
                   <li class="mo_gnb_menu"><span class="gnb_menu_link">룰렛</span>
                   </li>
-                  <li class="mo_gnb_menu"><span class="gnb_menu_link">시크릿</span></li>
+                  <li class="mo_gnb_menu"><span class="gnb_menu_link">vip</span></li>
                   <li class="mo_gnb_menu"><span class="gnb_menu_link">슬롯머신</span></li>
-                  <li class="mo_gnb_menu"><span class="gnb_menu_link">공지사항</span></li>
+                  <li class="mo_gnb_menu"><span class="gnb_menu_link">타로카드</span></li>
                 </ul>
               </div>
             </div><button type="button" class="btn_gnb_close"><span class="blind">닫기</span></button>
@@ -70,8 +70,7 @@
           <p class="sub_title">D&F Casino</p>
         </div>
       </div>
-
-      <div class="section_roulette">
+      <div class="section_roulette" id="roulette">
         <div class="inner">
           <div class="roulette_area">
             <div class="roulette">
@@ -85,11 +84,11 @@
           </div>
         </div>
       </div>
-      <div class="section_vip">
+      <div class="section_vip" id="vip">
         <div class="inner">
         </div>
       </div>
-      <div class="section_slotmachine">
+      <div class="section_slotmachine" id="machine">
         <div class="inner">
           <div class="slot_machine">
             <div class="reel slot_01" id="reel1">
@@ -123,9 +122,9 @@
                 <div class="thumbnail"><img
                     src="https://static.dfoneople.com/publish/images/webshop/Image/20201105bljwo3wy.jpg" alt=""></div>
                 <div class="thumbnail"><img
-                    src="https://static.dfoneople.com/publish/images/webshop/Image/20201105bljwo3wy.jpg" alt=""></div>
-                <div class="thumbnail"><img
                     src="https://static.dfoneople.com/publish/images/webshop/Image/20201202hphh04ni.jpg" alt=""></div>
+                <div class="thumbnail"><img
+                    src="https://static.dfoneople.com/publish/images/webshop/Image/20201105bljwo3wy.jpg" alt=""></div>
                 <div class="thumbnail"><img
                     src="https://static.dfoneople.com/publish/images/webshop/Image/20201202hphh04ni.jpg" alt=""></div>
                 <div class="thumbnail"><img
@@ -233,10 +232,9 @@
               </div>
             </div>
           </div>
-          <button class="btn_slot" onclick="spin()">Spin</button>
+          <button class="btn_slot" onclick="pull()">Pull the reels</button>
         </div>
       </div>
-
       <div class="section_card" id="shuffler"></div>
     </div>
 
@@ -244,28 +242,30 @@
 
   <div class="pop_layer_01">
     <div class="pop_content">
-      <button class="close_btn" onclick="hidePopUp()"><span class="blind">Close</span></button>
+      Congratulations! 
+      <button class="close_btn" onclick="closePop()"><span class="blind">Close</span></button>
     </div>
   </div>
 
+  <div class="pop_layer_02">
+    <div class="pop_content">
+      Congratulations! 
+      <button class="close_btn" onclick="closePop()"><span class="blind">Close</span></button>
+    </div>
+  </div>
+
+  <div class="pop_layer_03">
+    <div class="pop_content">
+      Maybe next time...
+      <button class="close_btn" onclick="closePop()"><span class="blind">Close</span></button>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script>
-    let observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fadein');
-        }
-      });
-    });
-
-    let fadeinElements = document.querySelectorAll('.motion');
-    fadeinElements.forEach((element) => {
-      observer.observe(element);
-    });
-
-    function handleScroll(element) {
+    //스크롤, gnb
+    function scrollEvent(element) {
       if (window.scrollY > 0) {
         element.classList.add('scroll');
       } else {
@@ -276,34 +276,13 @@
     var spot = document.querySelector('.spot');
     var header = document.querySelector('.header');
 
-    handleScroll(spot);
-    handleScroll(header);
+    scrollEvent(spot);
+    scrollEvent(header);
 
     window.addEventListener('scroll', function () {
-      handleScroll(spot);
-      handleScroll(header);
+      scrollEvent(spot);
+      scrollEvent(header);
     });
-
-    var swiper = new Swiper(".works_swiper", {
-      slidesPerView: 'auto',
-      spaceBetween: 30,
-      grabCursor: true,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-
-        768: {
-          spaceBetween: 40,
-        },
-        1024: {
-          spaceBetween: 50,
-        },
-      },
-    });
-
 
     document.addEventListener("DOMContentLoaded", function () {
       var btnMoMenu = document.querySelector(".btn_mo_menu");
@@ -334,16 +313,16 @@
 
           switch (index) {
             case 0:
-              targetSectionClass = ".section_introduce";
+              targetSectionClass = ".section_roulette";
               break;
             case 1:
-              targetSectionClass = ".section_website";
+              targetSectionClass = ".section_vip";
               break;
             case 2:
-              targetSectionClass = ".section_works";
+              targetSectionClass = ".section_slotmachine";
               break;
             case 3:
-              targetSectionClass = ".footer";
+              targetSectionClass = ".section_card";
               break;
             default:
               targetSectionClass = ".spot";
@@ -375,6 +354,7 @@
       });
     });
 
+    //룰렛 이벤트
     function stopRoulette() {
       const roulette = document.querySelector('.roulette');
       const rotation = getComputedStyle(roulette).getPropertyValue('transform');
@@ -389,15 +369,19 @@
         roulette.style.animation = 'none';
       }, 2500);
     }
+    
+    //슬롯머신 이벤트
     const symbols = [
       'url(https://static.dfoneople.com/publish/images/webshop/Image/20201103fjqnj1gj.jpg)',
-      'url(https://via.placeholder.com/10x10)',
-      'url(https://via.placeholder.com/10x10)',
-      'url(https://via.placeholder.com/10x10)',
-      'url(https://via.placeholder.com/10x10)'
+      'url(https://static.dfoneople.com/publish/images/webshop/Image/20201104uhegvvgb.jpg)',
+      'url(https://static.dfoneople.com/publish/images/webshop/Image/20201104yga0hc3c.jpg)',
+      'url(https://static.dfoneople.com/publish/images/webshop/Image/20201104fshjwis4.jpg)',
+      'url(https://static.dfoneople.com/publish/images/webshop/Image/20201104odb2qlgb.jpg)',
+      'url(https://static.dfoneople.com/publish/images/webshop/Image/20201104q5nohk5o.jpg)',
+      'url(https://static.dfoneople.com/publish/images/webshop/Image/20201202hphh04ni.jpg)'
     ];
 
-    function spin() {
+    function pull() {
       const reels = document.querySelectorAll('.symbols');
       const thumbnails = document.querySelectorAll('.thumbnail');
 
@@ -410,26 +394,50 @@
         selectedSymbols.push(randomSymbol);
       });
 
-      thumbnails.forEach(thumbnail => {
-        thumbnail.style.display = "none";
-      });
-
-      // Check if all three reels have the same image
+      
       if (selectedSymbols.every(symbol => symbol === selectedSymbols[0])) {
-        alert("Congratulations! You got a match!");
+        document.querySelector(".slot_machine").classList.add("active");
+        setTimeout(() => {
+          document.body.classList.add("scroll_fix");
+          document.querySelector(".dimmed").classList.add("active");
+          document.querySelector(".pop_layer_02").classList.add("active");                    
+          document.querySelector(".slot_machine").classList.add("end");
+          thumbnails.forEach(thumbnail => {
+            thumbnail.style.display = "none";
+          });
+        }, 2500);
       } else {
-        alert("Don't worry");
+        document.querySelector(".slot_machine").classList.add("active");
+        setTimeout(() => {
+          document.body.classList.add("scroll_fix");
+          document.querySelector(".dimmed").classList.add("active");
+          document.querySelector(".pop_layer_03").classList.add("active");                    
+          document.querySelector(".slot_machine").classList.add("end");
+          thumbnails.forEach(thumbnail => {
+            thumbnail.style.display = "none";
+          });
+        }, 2500);
       }
     }
 
-    function hidePopUp() {
+    //이벤트 팝업
+    function closePop() {
       document.querySelector('.roulette').style.display = "block";
       document.querySelector('.section_roulette .roulette_area').classList.add("stop");
       document.querySelector(".dimmed").classList.remove("active");
       document.querySelector(".pop_layer_01").classList.remove("active");
+      document.querySelector(".pop_layer_02").classList.remove("active");
+      document.querySelector(".pop_layer_03").classList.remove("active");
       document.body.classList.remove("scroll_fix");
       document.querySelector('.roulette').style.animation = 'spin 12s infinite linear forwards';
     }
+    
+    //타로카드 이벤트
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelector(".btn_result").addEventListener("click", function () {
+        document.querySelector('.section_card').classList.add("active");
+      });
+    });
   </script>
 
 </body>
