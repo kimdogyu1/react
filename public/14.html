@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="src/css/main.css">
+    <title>Slot Machine</title>
+</head>
+
+<body>
+    <div class="slot_machine">
+        <div class="reel slot_01" id="reel1">
+            <div class="symbols"></div>
+        </div>
+        <div class="reel slot_02" id="reel2">
+            <div class="symbols"></div>
+        </div>
+        <div class="reel slot_03" id="reel3">
+            <div class="symbols"></div>
+        </div>        
+    </div>
+    <button class="btn_slot" onclick="spin()">Spin</button>
+
+    <script>
+        const symbols = [
+            'url(https://via.placeholder.com/60x80)',
+            'url(https://via.placeholder.com/50x80)',
+            'url(https://via.placeholder.com/70x80)',
+            'url(https://via.placeholder.com/100x80)',
+            'url(https://via.placeholder.com/90x80)'
+        ];
+
+        function spin() {
+            const reels = document.querySelectorAll('.symbols');
+            let selectedSymbols = [];
+
+            reels.forEach(reel => {
+                const randomSymbolIndex = Math.floor(Math.random() * symbols.length);
+                const randomSymbol = symbols[randomSymbolIndex];
+                reel.style.backgroundImage = randomSymbol;
+                selectedSymbols.push(randomSymbol);
+            });
+
+            // Check if all three reels have the same image
+            if (selectedSymbols.every(symbol => symbol === selectedSymbols[0])) {
+                alert("Congratulations! You got a match!");
+            } else {
+                alert("Don't worry");
+            }
+        }
+    </script>
+</body>
+
+</html>

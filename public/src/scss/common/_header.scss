@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-width: 320px;
+    z-index: 10;
+
+    .btn_mo_menu {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        width: 58px;
+        height: 49px;
+        padding: 15px 20px;
+        outline: 0;
+
+        &:after {
+            content: '';
+            display: block;
+            @include sprite($menu);
+        }
+    }
+
+    .logo {
+        position: relative;        
+        font-size: 0;
+        background: url(https://resource.df.nexon.com/ui/img/common/logo.png) 50% 0 no-repeat;
+        background-size: 110px 68px;
+        width: 110px;
+        height: 68px;                
+        >a {
+            display: block;            
+        }
+    }
+
+    &.scroll {
+        background-color: #fff;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .pc_gnb {
+        display: none;
+    }
+
+    .mo_gnb_wrap {
+        &.on {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+
+            .mo_gnb {
+                -webkit-transform: translateX(0);
+                -moz-transform: translateX(0);
+                -ms-transform: translateX(0);
+                transform: translateX(0);
+            }
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+
+    .mo_gnb {
+        -webkit-transform: translateX(335px);
+        -moz-transform: translateX(335px);
+        -ms-transform: translateX(335px);
+        transform: translateX(335px);
+        -webkit-transition: all 0.6s ease-in-out;
+        transition: all 0.6s ease-in-out;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 335px;
+        background-color: #fff;
+        z-index: 1001;
+
+        .btn_gnb_close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            width: 32px;
+            height: 32px;            
+
+            &::after {
+                content: '';
+                @include sprite($close);             
+                @include centerTransform;                                                     
+            }
+        }
+    }
+
+    .mo_gnb_inner {
+        height: 100%;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        border-top: 1px solid rgba(0, 0, 0, 0.1); 
+        margin-top: 72px;
+    }
+
+    .mo_gnb_scroll {
+        position: relative;
+        min-height: 100%;
+        padding: 0 0 160px;        
+    }
+
+    .mo_gnb_menu {
+        position: relative;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 30px;
+        color: #000;           
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+        cursor: pointer;        
+    }
+}
+
+.header_inner {
+    position: relative;
+    max-width: 1440px;
+    height: 70px;
+    margin: 0 auto;    
+}
+
+@media screen and (min-width: 1280px) { 
+    .header { 
+        .btn_mo_menu {
+            display: none;
+        }
+        .mo_gnb_wrap {
+            &.on {
+                display: none;
+            }
+        }  
+        .pc_gnb {
+            display: block;            
+        }
+        .header_inner {            
+            height: 120px;            
+            padding: 10px 30px;
+            &::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+        }
+        .logo {
+            float: left;
+            background: url(https://www.neople.co.kr/neople/images/LOGO.gif) 50% 0 no-repeat;
+            background-size: 129px 49px;
+            width: 129px;
+            height: 49px;
+            margin-top: 40px;
+    
+            >a {                
+                height: 49px;
+            }
+        }
+        .gnb_menu_list {            
+            &::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+        }
+        .gnb_menu_item {
+            float: right;
+            font-size: 24px;
+            line-height: 1.5;     
+            font-weight: bold;       
+            margin-top: 40px;
+            margin: 40px 0 0 30px;
+            &+.gnb_menu_item {
+                margin-left: 30px;
+            }
+        }
+    }
+}

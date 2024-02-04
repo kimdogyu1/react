@@ -1,0 +1,288 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$applelogo-name: 'applelogo';
+$applelogo-x: 108px;
+$applelogo-y: 0px;
+$applelogo-offset-x: -108px;
+$applelogo-offset-y: 0px;
+$applelogo-width: 18px;
+$applelogo-height: 18px;
+$applelogo-total-width: 126px;
+$applelogo-total-height: 120px;
+$applelogo-image: '../sp_result/sprite.png';
+$applelogo: (108px, 0px, -108px, 0px, 18px, 18px, 126px, 120px, '../sp_result/sprite.png', 'applelogo', );
+$applelogo-2x-name: 'applelogo@2x';
+$applelogo-2x-x: 0px;
+$applelogo-2x-y: 0px;
+$applelogo-2x-offset-x: 0px;
+$applelogo-2x-offset-y: 0px;
+$applelogo-2x-width: 36px;
+$applelogo-2x-height: 36px;
+$applelogo-2x-total-width: 126px;
+$applelogo-2x-total-height: 120px;
+$applelogo-2x-image: '../sp_result/sprite.png';
+$applelogo-2x: (0px, 0px, 0px, 0px, 36px, 36px, 126px, 120px, '../sp_result/sprite.png', 'applelogo@2x', );
+$applelogo-white-name: 'applelogo_white';
+$applelogo-white-x: 108px;
+$applelogo-white-y: 18px;
+$applelogo-white-offset-x: -108px;
+$applelogo-white-offset-y: -18px;
+$applelogo-white-width: 18px;
+$applelogo-white-height: 18px;
+$applelogo-white-total-width: 126px;
+$applelogo-white-total-height: 120px;
+$applelogo-white-image: '../sp_result/sprite.png';
+$applelogo-white: (108px, 18px, -108px, -18px, 18px, 18px, 126px, 120px, '../sp_result/sprite.png', 'applelogo_white', );
+$applelogo-white-2x-name: 'applelogo_white@2x';
+$applelogo-white-2x-x: 36px;
+$applelogo-white-2x-y: 0px;
+$applelogo-white-2x-offset-x: -36px;
+$applelogo-white-2x-offset-y: 0px;
+$applelogo-white-2x-width: 36px;
+$applelogo-white-2x-height: 36px;
+$applelogo-white-2x-total-width: 126px;
+$applelogo-white-2x-total-height: 120px;
+$applelogo-white-2x-image: '../sp_result/sprite.png';
+$applelogo-white-2x: (36px, 0px, -36px, 0px, 36px, 36px, 126px, 120px, '../sp_result/sprite.png', 'applelogo_white@2x', );
+$arrow-right-name: 'arrow_right';
+$arrow-right-x: 108px;
+$arrow-right-y: 90px;
+$arrow-right-offset-x: -108px;
+$arrow-right-offset-y: -90px;
+$arrow-right-width: 10px;
+$arrow-right-height: 10px;
+$arrow-right-total-width: 126px;
+$arrow-right-total-height: 120px;
+$arrow-right-image: '../sp_result/sprite.png';
+$arrow-right: (108px, 90px, -108px, -90px, 10px, 10px, 126px, 120px, '../sp_result/sprite.png', 'arrow_right', );
+$arrow-right-2x-name: 'arrow_right@2x';
+$arrow-right-2x-x: 56px;
+$arrow-right-2x-y: 72px;
+$arrow-right-2x-offset-x: -56px;
+$arrow-right-2x-offset-y: -72px;
+$arrow-right-2x-width: 20px;
+$arrow-right-2x-height: 20px;
+$arrow-right-2x-total-width: 126px;
+$arrow-right-2x-total-height: 120px;
+$arrow-right-2x-image: '../sp_result/sprite.png';
+$arrow-right-2x: (56px, 72px, -56px, -72px, 20px, 20px, 126px, 120px, '../sp_result/sprite.png', 'arrow_right@2x', );
+$arrow-right-white-name: 'arrow_right_white';
+$arrow-right-white-x: 96px;
+$arrow-right-white-y: 72px;
+$arrow-right-white-offset-x: -96px;
+$arrow-right-white-offset-y: -72px;
+$arrow-right-white-width: 10px;
+$arrow-right-white-height: 10px;
+$arrow-right-white-total-width: 126px;
+$arrow-right-white-total-height: 120px;
+$arrow-right-white-image: '../sp_result/sprite.png';
+$arrow-right-white: (96px, 72px, -96px, -72px, 10px, 10px, 126px, 120px, '../sp_result/sprite.png', 'arrow_right_white', );
+$arrow-right-white-2x-name: 'arrow_right_white@2x';
+$arrow-right-white-2x-x: 76px;
+$arrow-right-white-2x-y: 72px;
+$arrow-right-white-2x-offset-x: -76px;
+$arrow-right-white-2x-offset-y: -72px;
+$arrow-right-white-2x-width: 20px;
+$arrow-right-white-2x-height: 20px;
+$arrow-right-white-2x-total-width: 126px;
+$arrow-right-white-2x-total-height: 120px;
+$arrow-right-white-2x-image: '../sp_result/sprite.png';
+$arrow-right-white-2x: (76px, 72px, -76px, -72px, 20px, 20px, 126px, 120px, '../sp_result/sprite.png', 'arrow_right_white@2x', );
+$close-name: 'close';
+$close-x: 32px;
+$close-y: 72px;
+$close-offset-x: -32px;
+$close-offset-y: -72px;
+$close-width: 24px;
+$close-height: 24px;
+$close-total-width: 126px;
+$close-total-height: 120px;
+$close-image: '../sp_result/sprite.png';
+$close: (32px, 72px, -32px, -72px, 24px, 24px, 126px, 120px, '../sp_result/sprite.png', 'close', );
+$external-link-name: 'external_link';
+$external-link-x: 108px;
+$external-link-y: 36px;
+$external-link-offset-x: -108px;
+$external-link-offset-y: -36px;
+$external-link-width: 18px;
+$external-link-height: 18px;
+$external-link-total-width: 126px;
+$external-link-total-height: 120px;
+$external-link-image: '../sp_result/sprite.png';
+$external-link: (108px, 36px, -108px, -36px, 18px, 18px, 126px, 120px, '../sp_result/sprite.png', 'external_link', );
+$external-link-2x-name: 'external_link@2x';
+$external-link-2x-x: 0px;
+$external-link-2x-y: 36px;
+$external-link-2x-offset-x: 0px;
+$external-link-2x-offset-y: -36px;
+$external-link-2x-width: 36px;
+$external-link-2x-height: 36px;
+$external-link-2x-total-width: 126px;
+$external-link-2x-total-height: 120px;
+$external-link-2x-image: '../sp_result/sprite.png';
+$external-link-2x: (0px, 36px, 0px, -36px, 36px, 36px, 126px, 120px, '../sp_result/sprite.png', 'external_link@2x', );
+$external-link-white-name: 'external_link_white';
+$external-link-white-x: 108px;
+$external-link-white-y: 54px;
+$external-link-white-offset-x: -108px;
+$external-link-white-offset-y: -54px;
+$external-link-white-width: 18px;
+$external-link-white-height: 18px;
+$external-link-white-total-width: 126px;
+$external-link-white-total-height: 120px;
+$external-link-white-image: '../sp_result/sprite.png';
+$external-link-white: (108px, 54px, -108px, -54px, 18px, 18px, 126px, 120px, '../sp_result/sprite.png', 'external_link_white', );
+$external-link-white-2x-name: 'external_link_white@2x';
+$external-link-white-2x-x: 36px;
+$external-link-white-2x-y: 36px;
+$external-link-white-2x-offset-x: -36px;
+$external-link-white-2x-offset-y: -36px;
+$external-link-white-2x-width: 36px;
+$external-link-white-2x-height: 36px;
+$external-link-white-2x-total-width: 126px;
+$external-link-white-2x-total-height: 120px;
+$external-link-white-2x-image: '../sp_result/sprite.png';
+$external-link-white-2x: (36px, 36px, -36px, -36px, 36px, 36px, 126px, 120px, '../sp_result/sprite.png', 'external_link_white@2x', );
+$googleplay-name: 'googleplay';
+$googleplay-x: 108px;
+$googleplay-y: 72px;
+$googleplay-offset-x: -108px;
+$googleplay-offset-y: -72px;
+$googleplay-width: 18px;
+$googleplay-height: 18px;
+$googleplay-total-width: 126px;
+$googleplay-total-height: 120px;
+$googleplay-image: '../sp_result/sprite.png';
+$googleplay: (108px, 72px, -108px, -72px, 18px, 18px, 126px, 120px, '../sp_result/sprite.png', 'googleplay', );
+$googleplay-2x-name: 'googleplay@2x';
+$googleplay-2x-x: 72px;
+$googleplay-2x-y: 0px;
+$googleplay-2x-offset-x: -72px;
+$googleplay-2x-offset-y: 0px;
+$googleplay-2x-width: 36px;
+$googleplay-2x-height: 36px;
+$googleplay-2x-total-width: 126px;
+$googleplay-2x-total-height: 120px;
+$googleplay-2x-image: '../sp_result/sprite.png';
+$googleplay-2x: (72px, 0px, -72px, 0px, 36px, 36px, 126px, 120px, '../sp_result/sprite.png', 'googleplay@2x', );
+$googleplay-white-name: 'googleplay_white';
+$googleplay-white-x: 0px;
+$googleplay-white-y: 102px;
+$googleplay-white-offset-x: 0px;
+$googleplay-white-offset-y: -102px;
+$googleplay-white-width: 18px;
+$googleplay-white-height: 18px;
+$googleplay-white-total-width: 126px;
+$googleplay-white-total-height: 120px;
+$googleplay-white-image: '../sp_result/sprite.png';
+$googleplay-white: (0px, 102px, 0px, -102px, 18px, 18px, 126px, 120px, '../sp_result/sprite.png', 'googleplay_white', );
+$googleplay-white-2x-name: 'googleplay_white@2x';
+$googleplay-white-2x-x: 72px;
+$googleplay-white-2x-y: 36px;
+$googleplay-white-2x-offset-x: -72px;
+$googleplay-white-2x-offset-y: -36px;
+$googleplay-white-2x-width: 36px;
+$googleplay-white-2x-height: 36px;
+$googleplay-white-2x-total-width: 126px;
+$googleplay-white-2x-total-height: 120px;
+$googleplay-white-2x-image: '../sp_result/sprite.png';
+$googleplay-white-2x: (72px, 36px, -72px, -36px, 36px, 36px, 126px, 120px, '../sp_result/sprite.png', 'googleplay_white@2x', );
+$menu-name: 'menu';
+$menu-x: 18px;
+$menu-y: 102px;
+$menu-offset-x: -18px;
+$menu-offset-y: -102px;
+$menu-width: 16px;
+$menu-height: 15px;
+$menu-total-width: 126px;
+$menu-total-height: 120px;
+$menu-image: '../sp_result/sprite.png';
+$menu: (18px, 102px, -18px, -102px, 16px, 15px, 126px, 120px, '../sp_result/sprite.png', 'menu', );
+$menu-2x-name: 'menu@2x';
+$menu-2x-x: 0px;
+$menu-2x-y: 72px;
+$menu-2x-offset-x: 0px;
+$menu-2x-offset-y: -72px;
+$menu-2x-width: 32px;
+$menu-2x-height: 30px;
+$menu-2x-total-width: 126px;
+$menu-2x-total-height: 120px;
+$menu-2x-image: '../sp_result/sprite.png';
+$menu-2x: (0px, 72px, 0px, -72px, 32px, 30px, 126px, 120px, '../sp_result/sprite.png', 'menu@2x', );
+$spritesheet-width: 126px;
+$spritesheet-height: 120px;
+$spritesheet-image: '../sp_result/sprite.png';
+$spritesheet-sprites: ($applelogo, $applelogo-2x, $applelogo-white, $applelogo-white-2x, $arrow-right, $arrow-right-2x, $arrow-right-white, $arrow-right-white-2x, $close, $external-link, $external-link-2x, $external-link-white, $external-link-white-2x, $googleplay, $googleplay-2x, $googleplay-white, $googleplay-white-2x, $menu, $menu-2x, );
+$spritesheet: (126px, 120px, '../sp_result/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

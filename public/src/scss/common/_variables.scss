@@ -1,0 +1,157 @@
+@charset "utf-8";
+@import "mixin.scss";
+
+html,
+body,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+select{
+  margin: 0;
+  padding: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+img {
+  vertical-align: top;
+}
+
+li,
+ol,
+ul {
+  list-style: none;
+}
+
+address,
+em,
+i {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color:#333;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing:0;
+}
+
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+button {
+  border: 0;
+  background: none;
+  -webkit-appearance: none;
+  font-family:NanumSquareR,'나눔스퀘어','맑은 고딕',MalgunGothic,'돋움', Dotum,AppleSDGothicNeo,Helvetica,sans-serif;
+  font-size:14px;
+  line-height:1;
+  &:hover{
+    cursor:pointer;
+  }
+  &:focus{
+    outline:0;
+  }
+}
+input,
+textarea{
+  border: 0;
+  background: none;
+  @include prefix(appearance,none,webkit moz ms o);
+  outline:0;
+  resize:none;
+  font-size:14px;
+  line-height: 1;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea{
+  font-family:NanumSquareR,'나눔스퀘어','맑은 고딕',MalgunGothic,'돋움', Dotum,AppleSDGothicNeo,Helvetica,sans-serif;
+}
+caption{
+  text-indent: -9999px;
+  font-size: 0;
+}
+
+body,
+html {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1;
+  -webkit-text-size-adjust: none;
+  color:#333;
+  font-family:NanumSquareR,'나눔스퀘어','맑은 고딕',MalgunGothic,'돋움', Dotum,AppleSDGothicNeo,Helvetica,sans-serif;
+}
+
+@font-face {
+  font-family: NanumSquareL;
+  src:url(../font/NanumSquareL.eot),url(../font/NanumSquareL.woff),url(../font/NanumSquareL.ttf);
+  src: url(../font/NanumSquareL.eot?#iefix) format('embedded-opentype'), url(../font/NanumSquareL.woff) format('woff'), url(../font/NanumSquareL.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: NanumSquareR;
+  src:url(../font/NanumSquareR.eot),url(../font/NanumSquareR.woff),url(../font/NanumSquareR.ttf);
+  src: url(../font/NanumSquareR.eot?#iefix) format('embedded-opentype'), url(../font/NanumSquareR.woff) format('woff'), url(../font/NanumSquareR.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: NanumSquareB;
+  src:url(../font/NanumSquareB.eot),url(../font/NanumSquareB.woff),url(../font/NanumSquareB.ttf);
+  src: url(../font/NanumSquareB.eot?#iefix) format('embedded-opentype'), url(../font/NanumSquareB.woff) format('woff'), url(../font/NanumSquareB.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: NanumSquareEB;
+  src:url(../font/NanumSquareEB.eot),url(../font/NanumSquareEB.woff),url(../font/NanumSquareEB.ttf);
+  src: url(../font/NanumSquareEB.eot?#iefix) format('embedded-opentype'), url(../font/NanumSquareEB.woff) format('woff'), url(../font/NanumSquareEB.ttf) format('truetype');
+}
+
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+  }
+  to {
+      opacity: 1;
+      transform: translateZ(0);
+  }
+}
+
+.fadein {
+	animation: fadeInUp 1s;	
+}

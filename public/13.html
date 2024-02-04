@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API 데이터 가져오기 (GET)</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+    <p id="apiDataParagraph">여기에 API 데이터가 표시됩니다.</p>
+    <button id="fetchDataButton">데이터 가져오기</button>
+
+    <script>
+        // 버튼 클릭 이벤트에 연결된 함수
+        function fetchDataOnClick() {
+            // GET 요청을 보낼 URL
+            const url = 'https://api.neople.co.kr/df/servers/cain/characters/f5e9a9e7f3a25bff362d4202d43338ba/status?apikey=nt9qm8ar61mXEjhbmSkLSsvEnLNILYQP';
+
+            // API 키 값
+            const apiKey = 'nt9qm8ar61mXEjhbmSkLSsvEnLNILYQP'; // 실제 API 키로 교체
+
+            $.ajax({
+                url: url,
+                method: 'GET',
+                beforeSend: function(xhr) {
+                    // beforeSend 콜백에서 헤더에 API 키 추가
+                    xhr.setRequestHeader('Authorization', 'Bearer ' + apiKey);
+                },
+                success: function(data) {
+                    // 가져온 데이터 중 'id' 값을 표시
+                    if (data && data.level) {
+                        $('#apiDataParagraph').text('API에서 가져온 ID 값: ' + data.level);
+                    } else {
+                        $('#apiDataParagraph').text('API에서 ID 값을 찾을 수 없습니다.');
+                    }
+                },
+                error: function(error) {
+                    console.error('API 데이터를 불러오는 중 에러 발생:', error);
+                }
+            });
+        }
+
+        // 버튼 클릭 이벤트에 fetchDataOnClick 함수 연결
+        $(document).ready(function() {
+            $('#fetchDataButton').on('click', fetchDataOnClick);
+        });
+    </script>
+
+</body>
+</html>
