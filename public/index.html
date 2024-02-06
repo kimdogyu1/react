@@ -86,7 +86,7 @@
       </div>
       <div class="section_vip" id="vip">
         <div class="inner">
-          <p class="sub_title">JACKPOT & FORTUNE</p>          
+          <p class="sub_title">JACKPOT & FORTUNE</p>
         </div>
       </div>
       <div class="section_slotmachine" id="machine">
@@ -229,10 +229,26 @@
                 <div class="thumbnail"><img
                     src="https://static.dfoneople.com/publish/images/webshop/Image/20201104odb2qlgb.jpg" alt=""></div>
                 <div class="thumbnail"><img
+                    src="https://static.dfoneople.com/publish/images/webshop/Image/20201104q5nohk5o.jpg" alt=""></div>
+                <div class="thumbnail"><img
+                    src="https://static.dfoneople.com/publish/images/webshop/Image/20201104odb2qlgb.jpg" alt=""></div>
+                <div class="thumbnail"><img
+                    src="https://static.dfoneople.com/publish/images/webshop/Image/20201104fshjwis4.jpg" alt=""></div>
+                <div class="thumbnail"><img
+                    src="https://static.dfoneople.com/publish/images/webshop/Image/20201104uhegvvgb.jpg" alt=""></div>
+                <div class="thumbnail"><img
+                    src="https://static.dfoneople.com/publish/images/webshop/Image/20201104q5nohk5o.jpg" alt=""></div>
+                <div class="thumbnail"><img
+                    src="https://static.dfoneople.com/publish/images/webshop/Image/20201104yga0hc3c.jpg" alt=""></div>
+                <div class="thumbnail"><img
+                    src="https://static.dfoneople.com/publish/images/webshop/Image/20201104uhegvvgb.jpg" alt=""></div>
+                <div class="thumbnail"><img
+                    src="https://static.dfoneople.com/publish/images/webshop/Image/20201103fjqnj1gj.jpg" alt=""></div>
+                <div class="thumbnail"><img
                     src="https://static.dfoneople.com/publish/images/webshop/Image/20201105bljwo3wy.jpg" alt=""></div>
               </div>
             </div>
-          </div>          
+          </div>
           <button class="btn_slot" onclick="pull()"><span class="blind">Pull the reels</span></button>
         </div>
       </div>
@@ -243,14 +259,14 @@
 
   <div class="pop_layer_01">
     <div class="pop_content">
-      Congratulations! 
+      Congratulations!
       <button class="close_btn" onclick="closePop()"><span class="blind">Close</span></button>
     </div>
   </div>
 
   <div class="pop_layer_02">
     <div class="pop_content">
-      Congratulations! 
+      Congratulations!
       <button class="close_btn" onclick="closePop02()"><span class="blind">Close</span></button>
     </div>
   </div>
@@ -349,7 +365,7 @@
           var bodyMargin = parseInt(getComputedStyle(document.body).marginTop);
 
           if (targetSection) {
-            window.scrollTo({ top: targetSection.offsetTop - 180, behavior: "smooth" });
+            window.scrollTo({ top: targetSection.offsetTop - 140, behavior: "smooth" });
           }
         });
       });
@@ -370,7 +386,7 @@
         roulette.style.animation = 'none';
       }, 2500);
     }
-    
+
     //슬롯머신 이벤트
     const symbols = [
       'url(https://static.dfoneople.com/publish/images/webshop/Image/20201103fjqnj1gj.jpg)',
@@ -395,13 +411,13 @@
         selectedSymbols.push(randomSymbol);
       });
 
-      
+
       if (selectedSymbols.every(symbol => symbol === selectedSymbols[0])) {
         document.querySelector(".slot_machine").classList.add("active");
         setTimeout(() => {
           document.body.classList.add("scroll_fix");
           document.querySelector(".dimmed").classList.add("active");
-          document.querySelector(".pop_layer_02").classList.add("active");                    
+          document.querySelector(".pop_layer_02").classList.add("active");
           document.querySelector(".slot_machine").classList.add("end");
           thumbnails.forEach(thumbnail => {
             thumbnail.style.display = "none";
@@ -412,7 +428,7 @@
         setTimeout(() => {
           document.body.classList.add("scroll_fix");
           document.querySelector(".dimmed").classList.add("active");
-          document.querySelector(".pop_layer_03").classList.add("active");                    
+          document.querySelector(".pop_layer_03").classList.add("active");
           document.querySelector(".slot_machine").classList.add("end");
           thumbnails.forEach(thumbnail => {
             thumbnail.style.display = "none";
@@ -426,18 +442,18 @@
       document.querySelector('.roulette').style.display = "block";
       document.querySelector('.section_roulette .roulette_area').classList.add("stop");
       document.querySelector(".dimmed").classList.remove("active");
-      document.querySelector(".pop_layer_01").classList.remove("active");      
+      document.querySelector(".pop_layer_01").classList.remove("active");
       document.body.classList.remove("scroll_fix");
       document.querySelector('.roulette').style.animation = 'spin 12s infinite linear forwards';
     }
 
-    function closePop02() {            
-      document.querySelector(".dimmed").classList.remove("active");      
+    function closePop02() {
+      document.querySelector(".dimmed").classList.remove("active");
       document.querySelector(".pop_layer_02").classList.remove("active");
       document.querySelector(".pop_layer_03").classList.remove("active");
-      document.body.classList.remove("scroll_fix");      
+      document.body.classList.remove("scroll_fix");
     }
-    
+
     //타로카드 이벤트
     document.addEventListener("DOMContentLoaded", function () {
       document.querySelector(".btn_result").addEventListener("click", function () {

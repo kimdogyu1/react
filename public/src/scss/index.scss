@@ -39,7 +39,7 @@
 .spot {
 	overflow: hidden;
 	position: relative;
-	background: #24110d url(../img/bg_tablet.png) 50% no-repeat;
+	background: #24110d url(../img/bg_spot_mo.png) 50% no-repeat;
 	background-size: cover;
 	height: 330px;
 	margin-top: 70px;
@@ -63,7 +63,7 @@
 
 .section_roulette {
 	overflow: hidden;
-	background: #2d1e21 url(../img/mo_bg_section02.png) 50% no-repeat;
+	background: #2d1e21 url(../img/bg_section_roulette_mo.png) 50% no-repeat;
 	background-size: cover;
 	height: 295px;
 
@@ -96,7 +96,9 @@
 	}
 
 	.roulette {
-		@include centerTransform;
+		position: absolute;
+		top: 50%;
+		left: 50%;
 		width: 250px;
 		height: 250px;
 		border-radius: 50%;
@@ -191,7 +193,7 @@
 }
 
 .section_vip {
-	background: #090305 url(../img/mo_bg_section01.png) 50% no-repeat;
+	background: #090305 url(../img/bg_section_vip_mo.png) 50% no-repeat;
 	background-size: cover;
 	height: 330px;
 	.inner {
@@ -210,7 +212,7 @@
 }
 
 .section_slotmachine {
-	background: #090305 url(../img/bg_body.jpg) 50% no-repeat;
+	background: #090305 url(../img/bg_secret.jpg) 50% no-repeat;
 	background-size: cover;
 
 	.inner {
@@ -356,11 +358,11 @@
 	}
 
 	75% {
-		transform: translateY(-450%);
+		transform: translateY(-350%);
 	}
 
 	100% {
-		transform: translateY(-500%);
+		transform: translateY(-250%);
 	}
 }
 
@@ -448,10 +450,8 @@
 }
 
 .section_card {
-	background: #090305 url(../img/bg_body.jpg) 50% no-repeat;
-    background-size: cover;
-	height: 500px;
-	margin-top: -10px;
+	background: #090305 url(../img/bg_secret.jpg) 50% no-repeat;
+    background-size: cover;		
 	color: #fff;
 	&.active {
 		.inner {
@@ -461,8 +461,8 @@
 			display: none;
 		}		
 		.card_item {
-			width: 280px;
-			height: 480px;	
+			width: 170px;
+			height: 310px;	
 			animation: rotate-axis 1.2s linear!important;		
 		}
 	}
@@ -478,8 +478,8 @@
 		font-size: 0;
 	  }
 	.card_item {
-		width: 100px;		
-		height: 185px;
+		width: 85px;		
+		height: 146px;
   		background: url(../img/card_13.png) 50% 0 no-repeat;
 		background-size: cover;
   		margin: 5px;
@@ -754,21 +754,143 @@
 	}
 	.spot {
 		height: 430px;
-		&.sub_title {
+		.sub_title {
     		top: 124px;
     		font-size: 20px;
     		margin-left: 100px;
 		}
 	}	
 	.section_roulette {
-		height: 430px;
-		background: #2d1e21 url(../img/mo_bg_section02_tablet.png) 50% no-repeat;
-		background-size: cover;
+		height: 589px;
+		background: #2d1e21 url(../img/bg_section_roulette_pc.png) 50% no-repeat;
+		background-size: 750px 589px;
+		.inner {
+			padding: 86px;
+		}
+		.roulette_area {
+			&:before {
+				@include centerTransform();
+				margin: 4px 0 0;
+			}
+		}
+		.roulette {
+			width: 420px;
+			height: 420px;
+			margin-left: -210px;
+		}
+	}
+
+	.section_vip {
+		height: 422px;				
+		.sub_title {
+			top: 102px;
+			font-size: 18px;			
+		}
+	}
+
+	.section_slotmachine {		
+		.inner {
+			padding: 47px 20px;
+		}
+		.reel {
+			height: 220px;
+		}
+	}
+
+	.btn_slot {
+		margin-top: 40px;
+	}
+
+	.section_card {		
+		.inner {
+			padding: 47px 0;
+		}
+		button {
+			margin: 0 15px 40px;
+			font-size: 18px;
+		}
+		.card_item {
+			width: 180px;
+			height: 308px;
+			margin: 10px;
+		}
 	}
 }
 
 @media screen and (min-width: 750px) {
-
+	.spot {
+		height: 720px;
+		background: #24110d url(../img/bg_pc.png) 50% no-repeat;
+		background-size: 1280px 720px;
+		.sub_title {
+    		top: 205px;
+    		font-size: 30px;
+    		margin-left: 180px;
+		}
+	}
+	.section_roulette {
+		background-size: cover;
+	}
+	.section_vip {
+		height: 720px;
+		background: #090305 url(../img/bg_section_vip_pc.png) 50% no-repeat;
+		background-size: 1280px 720px;
+		.sub_title {
+    		top: 168px;
+    		font-size: 30px;    		
+		}
+	}
+	.section_slotmachine {
+		.inner {
+			padding: 120px 20px;
+		}
+		.reel {
+			height: 400px;
+			margin: 10px;
+		}		
+	}
+	.symbols {
+		.thumbnail {
+			margin: 40px 0;
+		}		
+	}
+	.slot_machine {
+		&.active {
+			&+.btn_slot {
+				&:before {			
+					top: 8px;		
+					background: url(../img/btn_reel_checked.png) 50% no-repeat;
+					background-size: 249px 161px;
+					width: 249px;
+					height: 161px;						
+				}
+			}
+		}
+	}
+	.btn_slot {
+		margin-top: 100px;
+		width: 249px;
+		height: 161px;
+		&:before {
+			background: url(../img/btn_reel.png) 50% no-repeat;
+			background-size: 249px 161px;
+			width: 249px;
+			height: 161px;						
+		}
+	}
+	.section_card {		
+		.inner {
+			padding: 120px 20px;
+		}
+		button {
+			margin: 0 15px 40px;
+			font-size: 22px;
+		}
+		.card_item {
+			width: 215px;
+			height: 370px;
+		}
+	}
 }
 
 @media screen and (min-width: 1280px) {
@@ -783,5 +905,9 @@
 	.inner {
 		max-width: 1280px;
 		margin: 0 auto;
+	}
+
+	.spot {
+		margin-top: 140px;
 	}
 }
