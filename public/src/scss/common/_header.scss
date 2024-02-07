@@ -151,15 +151,13 @@
             }
         }
         .logo {
-            float: left;
-            background: url(https://www.neople.co.kr/neople/images/LOGO.gif) 50% 0 no-repeat;
-            background-size: 129px 49px;
-            width: 129px;
-            height: 49px;
-            margin-top: 40px;
-    
+            float: left;            
+            background-size: 141px 88px;
+            width: 141px;
+            height: 88px;
+            margin-top: 20px;    
             >a {                
-                height: 49px;
+                height: 88px;
             }
         }
         .gnb_menu_list {            
@@ -175,9 +173,9 @@
             line-height: 1.5;     
             font-weight: bold;       
             margin-top: 40px;
-            margin: 40px 0 0 30px;
+            margin: 40px 0 0 55px;
             &+.gnb_menu_item {
-                margin-left: 30px;
+                margin-left: 55px;
             }
         }
     }
