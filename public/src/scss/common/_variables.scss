@@ -139,19 +139,3 @@ html {
   src:url(../font/NanumSquareEB.eot),url(../font/NanumSquareEB.woff),url(../font/NanumSquareEB.ttf);
   src: url(../font/NanumSquareEB.eot?#iefix) format('embedded-opentype'), url(../font/NanumSquareEB.woff) format('woff'), url(../font/NanumSquareEB.ttf) format('truetype');
 }
-
-
-@keyframes fadeInUp {
-  0% {
-      opacity: 0;
-      transform: translate3d(0, 100%, 0);
-  }
-  to {
-      opacity: 1;
-      transform: translateZ(0);
-  }
-}
-
-.fadein {
-	animation: fadeInUp 1s;	
-}

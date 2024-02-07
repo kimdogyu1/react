@@ -114,8 +114,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: url(../img/spin_circle.png) 50% 0 no-repeat;
-  background-size: 45px 44px;
+  background-image: url(../sp_result/sprite.png);
+  background-position: -350px -161px;
   width: 45px;
   height: 44px;
   border-radius: 50%;
@@ -125,46 +125,46 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .section_roulette .item01 {
+  background-image: url(../sp_result/sprite.png);
+  background-position: -222px -229px;
   width: 28px;
   height: 28px;
-  background: url(../img/item01.png) 50% no-repeat;
-  background-size: 28px 28px;
   position: absolute;
   top: 55%;
   left: 12%;
 }
 .section_roulette .item02 {
+  background-image: url(../sp_result/sprite.png);
+  background-position: -250px -229px;
   width: 28px;
   height: 28px;
-  background: url(../img/item02.png) 50% no-repeat;
-  background-size: 28px 28px;
   position: absolute;
   top: 78%;
   left: 44%;
 }
 .section_roulette .item03 {
+  background-image: url(../sp_result/sprite.png);
+  background-position: -278px -229px;
   width: 28px;
   height: 28px;
-  background: url(../img/item03.png) 50% no-repeat;
-  background-size: 28px 28px;
   position: absolute;
   top: 55%;
   left: 76%;
 }
 .section_roulette .item04 {
+  background-image: url(../sp_result/sprite.png);
+  background-position: -306px -229px;
   width: 28px;
   height: 28px;
-  background: url(../img/item04.png) 50% no-repeat;
-  background-size: 28px 28px;
   position: absolute;
   top: 19%;
   left: 64%;
 }
 .section_roulette .item05 {
+  background-image: url(../sp_result/sprite.png);
+  background-position: -334px -229px;
   width: 28px;
   height: 28px;
-  background: url(../img/item05.png) 50% no-repeat;
-  background-size: 28px 28px;
   position: absolute;
   top: 18%;
   left: 25%;
@@ -207,8 +207,8 @@
   animation: moveresult 1.5s linear infinite;
 }
 .slot_machine.active + .btn_slot:before {
-  background: url(../img/btn_reel_checked_mo.png) 50% no-repeat;
-  background-size: 50px 32px;
+  background-image: url(../sp_result/sprite.png);
+  background-position: -445px -161px;
   width: 50px;
   height: 32px;
   top: 2px;
@@ -380,10 +380,10 @@
   position: absolute;
   top: 0;
   left: 0;
+  background-image: url(../sp_result/sprite.png);
+  background-position: -395px -161px;
   width: 50px;
   height: 33px;
-  background: url(../img/btn_reel_mo.png) 50% no-repeat;
-  background-size: 50px 33px;
 }
 
 .section_card {
@@ -803,34 +803,34 @@
     background-size: cover;
   }
   .section_roulette .item01 {
+    background-image: url(../sp_result/sprite.png);
+    background-position: 0px -229px;
     width: 38px;
     height: 38px;
-    background: url(../img/item01.png) 50% no-repeat;
-    background-size: 38px 38px;
   }
   .section_roulette .item02 {
+    background-image: url(../sp_result/sprite.png);
+    background-position: -38px -229px;
     width: 38px;
     height: 38px;
-    background: url(../img/item02.png) 50% no-repeat;
-    background-size: 38px 38px;
   }
   .section_roulette .item03 {
+    background-image: url(../sp_result/sprite.png);
+    background-position: -76px -229px;
     width: 38px;
     height: 38px;
-    background: url(../img/item03.png) 50% no-repeat;
-    background-size: 38px 38px;
   }
   .section_roulette .item04 {
+    background-image: url(../sp_result/sprite.png);
+    background-position: -114px -229px;
     width: 38px;
     height: 38px;
-    background: url(../img/item04.png) 50% no-repeat;
-    background-size: 38px 38px;
   }
   .section_roulette .item05 {
+    background-image: url(../sp_result/sprite.png);
+    background-position: -152px -229px;
     width: 38px;
     height: 38px;
-    background: url(../img/item05.png) 50% no-repeat;
-    background-size: 38px 38px;
   }
   .section_vip {
     height: 720px;
@@ -853,8 +853,8 @@
   }
   .slot_machine.active + .btn_slot:before {
     top: 8px;
-    background: url(../img/btn_reel_checked.png) 50% no-repeat;
-    background-size: 249px 161px;
+    background-image: url(../sp_result/sprite.png);
+    background-position: -249px 0px;
     width: 249px;
     height: 161px;
   }
@@ -864,8 +864,8 @@
     height: 161px;
   }
   .btn_slot:before {
-    background: url(../img/btn_reel.png) 50% no-repeat;
-    background-size: 249px 161px;
+    background-image: url(../sp_result/sprite.png);
+    background-position: 0px 0px;
     width: 249px;
     height: 161px;
   }
@@ -915,15 +915,44 @@
     height: 600px;
     margin-left: -278px;
   }
-  .section_roulette .roulette span {
+  .section_roulette .item01 {
+    background-image: url(../sp_result/sprite.png);
+    background-position: -70px -161px;
     width: 56px;
     height: 56px;
-    background-size: 56px 56px;
+    border-radius: 20%;
+  }
+  .section_roulette .item02 {
+    background-image: url(../sp_result/sprite.png);
+    background-position: -126px -161px;
+    width: 56px;
+    height: 56px;
+    border-radius: 20%;
+  }
+  .section_roulette .item03 {
+    background-image: url(../sp_result/sprite.png);
+    background-position: -182px -161px;
+    width: 56px;
+    height: 56px;
+    border-radius: 20%;
+  }
+  .section_roulette .item04 {
+    background-image: url(../sp_result/sprite.png);
+    background-position: -238px -161px;
+    width: 56px;
+    height: 56px;
+    border-radius: 20%;
+  }
+  .section_roulette .item05 {
+    background-image: url(../sp_result/sprite.png);
+    background-position: -294px -161px;
+    width: 56px;
+    height: 56px;
     border-radius: 20%;
   }
   .section_roulette .btn_stop {
-    background: url(../img/spin_circle.png) 50% 0 no-repeat;
-    background-size: 70px 68px;
+    background-image: url(../sp_result/sprite.png);
+    background-position: 0px -161px;
     width: 70px;
     height: 68px;
   }

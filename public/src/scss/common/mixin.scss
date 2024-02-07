@@ -9,6 +9,7 @@
     }
 }
 //vender prefix
+// @include prefix(appearance,none,webkit moz ms o);
 @mixin prefix($property, $value, $prefixes: ()) {
     @each $prefix in $prefixes {
         #{'-' + $prefix + '-' + $property}: $value;

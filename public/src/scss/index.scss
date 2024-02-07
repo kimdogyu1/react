@@ -130,10 +130,7 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		background: url(../img/spin_circle.png) 50% 0 no-repeat;
-		background-size: 45px 44px;
-		width: 45px;
-		height: 44px;
+		@include sprite($spin_circle_mo);		
 		border-radius: 50%;
 		cursor: pointer;
 		-webkit-touch-callout: none;
@@ -142,50 +139,35 @@
 	}
 
 	.item01 {
-		width: 28px;
-		height: 28px;
-		background: url(../img/item01.png) 50% no-repeat;
-		background-size: 28px 28px;
+		@include sprite($item01_mo);
 		position: absolute;
 		top: 55%;
 		left: 12%;
 	}
 
 	.item02 {
-		width: 28px;
-		height: 28px;
-		background: url(../img/item02.png) 50% no-repeat;
-		background-size: 28px 28px;
+		@include sprite($item02_mo);
 		position: absolute;
 		top: 78%;
 		left: 44%;
 	}
 
 	.item03 {
-		width: 28px;
-		height: 28px;
-		background: url(../img/item03.png) 50% no-repeat;
-		background-size: 28px 28px;
+		@include sprite($item03_mo);
 		position: absolute;
 		top: 55%;
 		left: 76%;
 	}
 
 	.item04 {
-		width: 28px;
-		height: 28px;
-		background: url(../img/item04.png) 50% no-repeat;
-		background-size: 28px 28px;
+		@include sprite($item04_mo);
 		position: absolute;
 		top: 19%;
 		left: 64%;
 	}
 
 	.item05 {
-		width: 28px;
-		height: 28px;
-		background: url(../img/item05.png) 50% no-repeat;
-		background-size: 28px 28px;
+		@include sprite($item05_mo);
 		position: absolute;
 		top: 18%;
 		left: 25%;
@@ -231,10 +213,7 @@
 		}
 		&+.btn_slot {								
 			&:before {
-				background: url(../img/btn_reel_checked_mo.png) 50% no-repeat;
-				background-size: 50px 32px;
-				width: 50px;
-				height: 32px;
+				@include sprite($btn_reel_checked_mo);				
 				top: 2px;
 			}
 		}
@@ -442,10 +421,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 50px;
-		height: 33px;
-		background: url(../img/btn_reel_mo.png) 50% no-repeat;
-		background-size: 50px 33px;
+		@include sprite($btn_reel_mo);		
 	}
 }
 
@@ -888,34 +864,19 @@
 	.section_roulette {
 		background-size: cover;
 		.item01 {
-			width: 38px;
-			height: 38px;
-			background: url(../img/item01.png) 50% no-repeat;
-			background-size: 38px 38px;		
+			@include sprite($item01_pc);
 		}
 		.item02 {
-			width: 38px;
-			height: 38px;
-			background: url(../img/item02.png) 50% no-repeat;
-			background-size: 38px 38px;		
+			@include sprite($item02_pc);
 		}
 		.item03 {
-			width: 38px;
-			height: 38px;
-			background: url(../img/item03.png) 50% no-repeat;
-			background-size: 38px 38px;		
+			@include sprite($item03_pc);	
 		}
 		.item04 {
-			width: 38px;
-			height: 38px;
-			background: url(../img/item04.png) 50% no-repeat;
-			background-size: 38px 38px;		
+			@include sprite($item04_pc);	
 		}
 		.item05 {
-			width: 38px;
-			height: 38px;
-			background: url(../img/item05.png) 50% no-repeat;
-			background-size: 38px 38px;		
+			@include sprite($item05_pc);	
 		}
 	}
 	.section_vip {
@@ -946,10 +907,7 @@
 			&+.btn_slot {
 				&:before {			
 					top: 8px;		
-					background: url(../img/btn_reel_checked.png) 50% no-repeat;
-					background-size: 249px 161px;
-					width: 249px;
-					height: 161px;						
+					@include sprite($btn_reel_checked);											
 				}
 			}
 		}
@@ -959,10 +917,7 @@
 		width: 249px;
 		height: 161px;
 		&:before {
-			background: url(../img/btn_reel.png) 50% no-repeat;
-			background-size: 249px 161px;
-			width: 249px;
-			height: 161px;						
+			@include sprite($btn_reel);								
 		}
 	}
 	.section_card {		
@@ -1023,19 +978,30 @@
 			margin-top: 340px;
 			width: 600px;
 			height: 600px;
-			margin-left: -278px;
-			span {
-				width: 56px;
-				height: 56px;
-				background-size: 56px 56px;
-				border-radius: 20%;
-			}
+			margin-left: -278px;			
 		}		
+		.item01 {
+			@include sprite($item01);
+			border-radius: 20%
+		}
+		.item02 {
+			@include sprite($item02);
+			border-radius: 20%
+		}
+		.item03 {
+			@include sprite($item03);	
+			border-radius: 20%
+		}
+		.item04 {
+			@include sprite($item04);	
+			border-radius: 20%
+		}
+		.item05 {
+			@include sprite($item05);	
+			border-radius: 20%
+		}
 		.btn_stop {
-			background: url(../img/spin_circle.png) 50% 0 no-repeat;
-			background-size: 70px 68px;
-			width: 70px;
-			height: 68px;
+			@include sprite($spin_circle_pc);	
 		}
 	}
 
