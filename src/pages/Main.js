@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import CardShuffler from '../cardshuffler';
+import Board from '../board';
 
 function Main() {
   return (
     <MainContainer>
       <>
         <CardShuffler />
+        <Board />
       </>
     </MainContainer>
   );

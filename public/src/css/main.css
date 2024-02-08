@@ -320,7 +320,15 @@ html {
 .footer .footer_inner {
   padding: 0 40px;
 }
+.footer .copy {
+  zoom: 0.8;
+}
 
+@media screen and (min-width: 640px) {
+  .footer .copy {
+    zoom: 1;
+  }
+}
 .mo_hide {
   display: none;
 }
@@ -709,7 +717,7 @@ html {
 }
 
 .section_card {
-  background: #090305 url(../img/bg_secret.jpg) 50% no-repeat;
+  background: #0f110e;
   background-size: cover;
   color: #fff;
 }
@@ -820,6 +828,49 @@ html {
 }
 .section_card button:hover {
   background: rgba(63, 66, 69, 0.7);
+}
+.section_card .board_area h3 {
+  color: #ece1e1;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+.section_card .board_area input {
+  display: block;
+  margin: 10px auto 0;
+  color: #cb6a68;
+}
+.section_card .board_area input + button {
+  display: block;
+  margin: 10px auto 0;
+}
+.section_card .board_area input + button + button {
+  display: none;
+}
+.section_card .board_area ul {
+  max-width: 375px;
+  padding: 30px;
+  margin: 0 auto;
+}
+.section_card .board_area ul li {
+  position: relative;
+  padding-left: 9px;
+  text-indent: -9px;
+  line-height: 1.2;
+}
+.section_card .board_area ul li::before {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #9a2c13;
+  margin: 5px 5px 0 0;
+  text-indent: -5px;
+}
+.section_card .board_area ul li + li {
+  margin-top: 10px;
 }
 
 @keyframes fadeInDown {
@@ -1206,6 +1257,23 @@ html {
     width: 215px;
     height: 370px;
   }
+  .section_card .board_area h3 {
+    font-size: 27px;
+  }
+  .section_card .board_area input {
+    display: block;
+  }
+  .section_card .board_area input + button {
+    margin: 15px auto 0;
+  }
+  .section_card .board_area ul {
+    max-width: 600px;
+    padding: 45px;
+    font-size: 18px;
+  }
+  .section_card .board_area ul li::before {
+    margin: 7px 7px 0 0;
+  }
 }
 @media screen and (min-width: 1280px) {
   .inner {
@@ -1297,6 +1365,17 @@ html {
   .section_card.active .card_item {
     width: 250px;
     height: 428px;
+  }
+  .section_card .board_area h3 {
+    font-size: 36px;
+  }
+  .section_card .board_area input + button {
+    margin: 20px auto 0;
+  }
+  .section_card .board_area ul {
+    max-width: 1000px;
+    padding: 50px;
+    font-size: 22px;
   }
   .section_description .inner {
     padding: 100px 30px;

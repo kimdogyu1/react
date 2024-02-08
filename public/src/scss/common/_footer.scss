@@ -8,4 +8,18 @@
     .footer_inner {
         padding: 0 40px;
     }
+
+    .copy {
+        zoom: 0.8;
+    }
+}
+
+
+
+@media screen and (min-width: 640px) { 
+    .footer { 
+        .copy {
+            zoom: 1;
+        }
+    }    
 }
