@@ -15,8 +15,8 @@
   <link rel="stylesheet" type="text/css" href="src/css/main.css">
 </head>
 
-<body>
-  <div class="dimmed"></div>
+<body class="scroll_fix">
+  <div class="dimmed active"></div>
   <p class="blind">
     현재 페이지는 라이브러리(리액트)를 이용하여 환경 구축을 하였습니다.
     자바스크립트 자동 빌드 gulp(전처리기)를 활용하여 scss, sprite img, mixin, component 등 활용하여 편리하게 작업이 가능하도록 만들었습니다.
@@ -339,6 +339,26 @@
     </footer>
   </div>
 
+  <div class="pop_layer_whole active">
+    <div class="pop_content">
+      <p>
+        현재 페이지는 라이브러리(리액트)를 이용하여 환경 구축을 하였습니다.<br>
+        자바스크립트 자동 빌드 gulp(전처리기)를 활용하여 scss, sprite img, mixin, component 등 활용하여 편리하게 작업이 가능하도록 만들었습니다.<br>
+        <br>
+        업무 진행시 웹 개발 페이지와 웹퍼블리셔 페이지 싱크가 안 맞는 경우들이 존재합니다.<br>
+        추후 업무범위 확장 및 페이지 리뉴얼 등 큰 이슈 상황에서 라이브러리나 Scss로 배포 및 제작된 페이지 자체 내에서
+        html, scss(css), 이미지, 인터렉션 등 직접 수정 진행이 가능하도록 라이브러리&동적페이지 요소를 활용했습니다.<br>
+        <br>
+        물론 개발 라이브러리 구조에 맞게 컴포넌트나 스타일 적용 방식 등 고려할 점이나 변수들은 존재합니다.(사이드이펙트, 머지 충돌 포함 등...)<br>
+        기획자, 디자이너, 개발자 모두 동일한 싱크로 확인하고, 프로세스가 간소화 되도록 목표를 잡고 계속해서 발전시키겠습니다.<br>
+        <br>
+        환경 구축이란 부분이 겉으로 표현되기에는 부족함이 있지만 계속해서 개선해 나아가야 할 이슈라고 생각됩니다.<br>
+        (해당 산출물은 이벤트 페이지에서 사용 가능한 룰렛, 슬롯머신, 카드 애니메이션, 메세지 표시 등 정적&동적 페이지, 전처리기(gulp.js)를 활용하여 제작하였습니다.)<br>
+      </p>
+      <button class="close_btn" onclick="closeWhole()"><span class="blind">Close</span></button>
+    </div>
+  </div>
+
   <div class="pop_layer_01">
     <div class="pop_content">
       Congratulations!
@@ -512,6 +532,13 @@
           });
         }, 2500);
       }
+    }
+    
+    //인트로 공지 팝업
+    function closeWhole() {        
+      document.querySelector(".dimmed").classList.remove("active");
+      document.querySelector(".pop_layer_whole").classList.remove("active");
+      document.body.classList.remove("scroll_fix");      
     }
 
     //이벤트 팝업

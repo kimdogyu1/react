@@ -647,6 +647,60 @@
 	}
 }
 
+.pop_layer_whole {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	padding: 10px 10px 30px 10px;
+	background-color: #1d2230;
+	z-index: 1010;
+	width: 80%;
+	height: 80%;
+	&.active {
+		display: block;
+	}
+}
+
+.pop_layer_whole .pop_content {
+	position: relative;	
+	height: 95%;	
+	color: #ffd2e3;
+    font-size: 15px;    
+	font-weight: bold;
+    padding-top: 30px;
+	word-break: keep-all;
+	p {
+		overflow-y: auto;
+		max-height: 100%;
+	}
+}
+
+.pop_layer_whole .pop_content .close_btn {
+	position: absolute;
+	top: -50px;
+	right: -10px;
+	background-image: url(https://kimdogyu1.github.io/kdg.html/images/sprite.png);
+	background-position: 0px -100px;
+	width: 45px;
+	height: 45px;
+	background-size: 200px 145px;
+}
+
+.pop_layer_whole .pop_content .close_btn::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 45px;
+	height: 45px;
+	background-color: rgba(29, 34, 48, 0.5);
+}
+
 .pop_layer_01 {
 	display: none;
 	position: fixed;
@@ -812,7 +866,13 @@
 }
 
 
-
+@media screen and (min-width: 375px) {
+	.pop_layer_whole .pop_content {
+		p {					
+			line-height: 1.5;
+		}
+	}
+}
 
 @media screen and (min-width: 640px) {
 	.inner {	
@@ -1003,6 +1063,11 @@
 			}
 		}
 	}	
+	.pop_layer_whole .pop_content {
+		p {
+			font-size: 18px;
+		}
+	}
 }
 
 @media screen and (min-width: 1280px) {
@@ -1160,5 +1225,11 @@
 		height: 330px;		
 		font-size: 50px;		
 		padding-top: 60px;
+	}
+
+	.pop_layer_whole .pop_content {
+		p {			
+			font-size: 23px;
+		}
 	}
 }
